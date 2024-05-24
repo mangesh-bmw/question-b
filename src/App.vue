@@ -1,17 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <UserList />
+    <ParentComp />
+    <DynamicForm/>
+    <!-- <ValidateForm/> -->
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DynamicForm from './components/DynamicForm.vue';
+import ParentComp from "./components/ParentComp.vue";
+import UserList from "./components/UserList.vue";
+// import ValidateForm from './components/ValidateForm.vue';
+
+
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    UserList,
+    ParentComp,
+    DynamicForm,
+    // ValidateForm
+  },
+};
 </script>
 
 <style>
@@ -21,6 +33,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+width: 100%;
+  margin-top: 20px;
+  background-color: grey; /* Black with 50% opacity */
 }
 </style>
